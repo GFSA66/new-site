@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Add nav bar</h1>
-    <form action="{% url 'home_page' %}" method="post">
+    <h1>nav bar has been added!</h1>
+    <form action="{% url 'home' %}" method="post">
         <input type="text" name="name">
         <input type="text" name="url">
-        <button type="submit">Add nav</button>
+        <button type="submit">nav bar has been added!</button>
     </form>
 {% endblock%}
