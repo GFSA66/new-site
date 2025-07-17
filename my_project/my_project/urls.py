@@ -23,3 +23,7 @@ urlpatterns = [
     path('members/', include('django.contrib.auth.urls')),
     path('members/', include('members.urls')),
 ]
+
+admin.site.site_header = "Administration Club"
+admin.site.site_title = "Admin Club Portal"
+admin.site.index_title = "Club Membership Area"
