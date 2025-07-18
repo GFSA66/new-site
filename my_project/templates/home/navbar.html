@@ -10,6 +10,12 @@
     {% else %}
       <li class="crumb"><a href="{% url "register_user" %}">register</a></li>
       <li class="crumb"><a href="{% url "login" %}">login</a></li>
-    {% endif %}
+      {% endif %}
+
+      <div class="crumb form-check form-switch">
+          <input class="crumb form-check-input" type="checkbox" id="darkModeSwitch" checked aria-label="Switch between light and dark mode" data-bs-toggle="tooltip" data-bs-placement="top" title="Switch between light and dark mode">
+          <label class="crumb form-check-label" for="darkModeSwitch">Dark Mode</label>
+      </div>
+
   </ol>
 </nav>
