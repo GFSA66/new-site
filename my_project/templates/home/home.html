@@ -3,8 +3,9 @@
 {% block content %}
     <h1>nav bar has been added!</h1>
     <form action="{% url 'home' %}" method="post">
+        {% csrf_token %}
         <input type="text" name="name">
         <input type="text" name="url">
-        <button type="submit">nav bar has been added!</button>
+        <input type="submit" value="nav bar has been added!" class="btn btn-secondary">
     </form>
 {% endblock%}
