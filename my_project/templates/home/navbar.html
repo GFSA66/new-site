@@ -1,21 +1,28 @@
-<nav class="crumbs">
-  <ol>
-    <li class="crumb"><a href="{% url 'home' %}">home</a></li>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Переключатель навигации">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">home</a></li>
     {% if user.is_authenticated%}
-      <li class="crumb"><a href="{% url "logout" %}">logout</a></li>
-      <li class="crumb">({{ user.username }})</li>
+      <li class="nav-item "><a class="nav-link active" href="{% url "logout" %}">logout</a></li>
+      <li class="nav-item "><a class="nav-link" >({{ user.username }})</a></li>
       {% if user.is_staff %}
-        <li class="crumb"><a href="{% url "admin:index" %}"><img src="https://cdn-icons-png.flaticon.com/512/738/738853.png" width="30" height="30" /></a></li>
+        <li class="nav-item "><a class="nav-link active" href="{% url "admin:index" %}"><img src="https://cdn-icons-png.flaticon.com/512/738/738853.png" width="30" height="30" /></a></li>
       {% endif %}
     {% else %}
-      <li class="crumb"><a href="{% url "register_user" %}">register</a></li>
-      <li class="crumb"><a href="{% url "login" %}">login</a></li>
+      <li class="nav-item "><a class="nav-link active" href="{% url "register_user" %}">register</a></li>
+      <li class="nav-item "><a class="nav-link active" href="{% url "login" %}">login</a></li>
       {% endif %}
 
-      <div class="crumb form-check form-switch">
-          <input class="crumb form-check-input" type="checkbox" id="darkModeSwitch" checked aria-label="Switch between light and dark mode" data-bs-toggle="tooltip" data-bs-placement="top" title="Switch between light and dark mode">
-          <label class="crumb form-check-label" for="darkModeSwitch">Dark Mode</label>
-      </div>
+    </ul>
+  </div>
+  <div class="position-absolute top-0 end-0 p-3 form-check form-switch">
+      <input class=" form-check-input" type="checkbox" id="darkModeSwitch" checked aria-label="Switch between light and dark mode" data-bs-toggle="tooltip" data-bs-placement="top" title="Switch between light and dark mode">
+      <label class=" form-check-label" for="darkModeSwitch">Dark Mode</label>
+  </div>
 
-  </ol>
+  </div>
 </nav>
