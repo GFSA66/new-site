@@ -18,8 +18,8 @@ def login_user(request):
             return redirect('login')
     
     else:
-        return render(request, 'authenticate/login.html', {})
-    
+        return render(request, 'members/login.html', {})
+
 def logout_user(request):
     logout(request)
     messages.success(request, ("You Have Been Logged out!"))
@@ -39,6 +39,6 @@ def register_user(request):
             return redirect('home')
     else:
         form = UserCreationForm()
-    return render(request, 'authenticate/register_user.html', {
+    return render(request, 'members/register_user.html', {
         'form':form,
     })

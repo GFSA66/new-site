@@ -20,8 +20,8 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    path('members/', include('django.contrib.auth.urls')),
-    path('members/', include('members.urls')),
+    # path('', include('django.contrib.auth.urls')),
+    path('', include('members.urls')),
 ]
 
 admin.site.site_header = "Administration Club"

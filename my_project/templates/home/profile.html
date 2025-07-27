@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
+{% load static%}
 
 {% block content %}
     <h1>Hello, {{ user.username }}!</h1>
         {% csrf_token %}
     {% if user.is_staff %}
-        <p>Here's Your Admin Club Invite: <a href="{% url 'admin:index' %}"><img src="https://cdn-icons-png.flaticon.com/512/738/738853.png" width="30" height="30" /></a></p>
+        <p>Here's Your Admin Club Invite: <a href="{% url 'admin:index' %}"><img src="{% static 'images/home/admin_club_invite.png' %}" width="30" height="30" /></a></p>
     {% else %}
         <p>You are a regular user.</p>
     {% endif %}
