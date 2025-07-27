@@ -25,7 +25,8 @@ def logout_user(request):
     messages.success(request, ("You Have Been Logged out!"))
     return redirect('home')
 
-# Добавить email в форму регистрации
+# TODO: Добавить email в форму регистрации
+
 def register_user(request):
     if request.method == "POST":
         form = UserCreationForm(request.POST)
