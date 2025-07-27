@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% block style %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{% static 'images/home/favicon.png' %}">
@@ -12,8 +13,6 @@
     <script src="{% static 'js/home/theme.js' %}"></script>
     <script src="{% static 'js/home/visibility.js' %}"></script>
 
-    {% block style %}
-
     {% endblock %}
 </head>
 <body>
@@ -21,7 +20,7 @@
     {% include 'home/navbar.html' %}
     
     <div class="container">
-         {% if messages %}
+            {% if messages %}
             {% for message in messages %}
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                 {{ message }}
@@ -29,8 +28,8 @@
                 </div>
             {% endfor %}
         {% endif %}
-    {% block content %}
-       
+    {% block content %} 
+    
     {% endblock %}
     </div>
 
