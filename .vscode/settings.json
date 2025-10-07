@@ -1,3 +1,7 @@
 {
-    "indentRainbow.colorOnWhiteSpaceOnly": true
+    "indentRainbow.colorOnWhiteSpaceOnly": true,
+    "indentRainbow.indicatorStyle": "classic",
+    "indentRainbow.indentSetter": {
+
+    }
 }

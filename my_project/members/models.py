@@ -5,6 +5,5 @@ from django.db import models
 #     username = models.CharField(label='username', max_length=64)
 #     password = models.CharField(widget=models.PasswordInput)
 #     email = models.EmailField(label="email", max_length=64)
-    
 #     def __str__(self):
 #         return self.username
